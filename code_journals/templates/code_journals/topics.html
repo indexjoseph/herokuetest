@@ -4,12 +4,12 @@
 
 <p>Topics</p>
 
-<u1>
+<ul>
     {% for topic in topics %}
         <li>{{ topic }}</li>
-    {% empty %}
+            <a href="{% url 'code_journals:topic' topic.id %}">{{ topic }}</a>
         <li>No topics have been added yet.</li>
     {% endfor %}
-</u1>
+</ul>
 
 {% endblock content %}
